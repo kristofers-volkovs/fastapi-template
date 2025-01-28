@@ -12,3 +12,4 @@ services:
       - "src/main/app.py"
     volumes:
       - ./src/:/app/src/
+      - ./tests/:/app/tests/

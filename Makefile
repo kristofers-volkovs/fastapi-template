@@ -3,18 +3,19 @@
 dev:
 	docker compose up backend
 
+build:
+	docker compose build backend
+
 prod:
 	docker compose -f docker-compose.yml up backend
 
-shell-dev:
+shell:
 	docker compose run --rm backend /bin/bash
 
 check:
 	uv run -- ruff format src/ && \
 	uv run -- ruff check src/ --fix && \
-	bash run_mypy
+	bash scripts/run_mypy
 
 test:
-	uv run -- coverage run --source=src -m pytest \
-	uv run -- coverage report --show-missing \
-	uv run -- coverage html --title "${@-coverage}"
+	bash scripts/init_test.sh

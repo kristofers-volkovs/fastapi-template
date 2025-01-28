@@ -24,43 +24,6 @@ wheels = [
 ]
 
 [[package]]
-name = "backend-simple-template"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "fastapi", extra = ["standard"] },
-    { name = "orjson" },
-    { name = "pydantic-settings" },
-]
-
-[package.dev-dependencies]
-dev = [
-    { name = "coverage" },
-    { name = "mypy" },
-    { name = "pre-commit" },
-    { name = "pytest" },
-    { name = "ruff" },
-    { name = "types-passlib" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.115.6,<1.0.0" },
-    { name = "orjson", specifier = ">=3.10.12,<4.0.0" },
-    { name = "pydantic-settings", specifier = ">=2.7.0,<3.0.0" },
-]
-
-[package.metadata.requires-dev]
-dev = [
-    { name = "coverage", specifier = ">=7.6.9,<8.0.0" },
-    { name = "mypy", specifier = ">=1.13.0,<2.0.0" },
-    { name = "pre-commit", specifier = ">=4.0.1,<5.0.0" },
-    { name = "pytest", specifier = ">=8.3.4,<9.0.0" },
-    { name = "ruff", specifier = ">=0.8.3,<1.0.0" },
-    { name = "types-passlib", specifier = ">=1.7.7.20240819,<2.0.0" },
-]
-
-[[package]]
 name = "certifi"
 version = "2024.12.14"
 source = { registry = "https://pypi.org/simple" }
@@ -199,6 +162,43 @@ wheels = [
 [package.optional-dependencies]
 standard = [
     { name = "uvicorn", extra = ["standard"] },
+]
+
+[[package]]
+name = "fastapi-template"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "fastapi", extra = ["standard"] },
+    { name = "orjson" },
+    { name = "pydantic-settings" },
+]
+
+[package.dev-dependencies]
+dev = [
+    { name = "coverage" },
+    { name = "mypy" },
+    { name = "pre-commit" },
+    { name = "pytest" },
+    { name = "ruff" },
+    { name = "types-passlib" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.115.6,<1.0.0" },
+    { name = "orjson", specifier = ">=3.10.12,<4.0.0" },
+    { name = "pydantic-settings", specifier = ">=2.7.0,<3.0.0" },
+]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "coverage", specifier = ">=7.6.9,<8.0.0" },
+    { name = "mypy", specifier = ">=1.13.0,<2.0.0" },
+    { name = "pre-commit", specifier = ">=4.0.1,<5.0.0" },
+    { name = "pytest", specifier = ">=8.3.4,<9.0.0" },
+    { name = "ruff", specifier = ">=0.8.3,<1.0.0" },
+    { name = "types-passlib", specifier = ">=1.7.7.20240819,<2.0.0" },
 ]
 
 [[package]]
